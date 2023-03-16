@@ -6,6 +6,6 @@ import {
 }
 
 func main() {
-	resultado :=Soma(1, 1)
+	resultado := Matematico.SomaX(1, 2)
 	fmt.Printf("%v", resultado)
 }

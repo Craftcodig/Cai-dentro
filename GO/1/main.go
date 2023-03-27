@@ -1,18 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"runtime"
+	"time"
+)
 
-// T1
-func main()
-{
-	// T1 <-> T2
-produto := make(chan string)
-
-	// T2
-go func() {
-	produto <- "Produto Disponível"
-}()
-
-result := <-produto
-fmt.Println(result)
-}
+func main() {
+	runtime.GOMAXPROCS(1)
+	fmt.Println("Começou")
+	time.Sleep(time.Second)
+	fmt.Println("Terminou")
+	}

@@ -5,7 +5,7 @@ import ("fmt"
 )
 
 func contador(tipo string) {
-	for 1 := 0; i < 5; i++ {
+	for i := 0; i < 5; i++ {
 		fmt.Println(tipo, i)
 		time.Sleep(time.Second)
 	}
@@ -13,8 +13,8 @@ func contador(tipo string) {
 
 func main(){
 
-	go contador(tipo:"a")
-	go contador(tipo:"b")
+	go contador("a")
+	go contador("b")
 
 	time.Sleep(time.Second * 10)
 
